@@ -1,0 +1,12 @@
+div.formfields {
+	margin: 10px;
+}
+
+div.formfields label {
+	margin-left: 16px;
+	margin-right: 12px;
+}
+
+div.formfields select {
+	width: 300px;
+}

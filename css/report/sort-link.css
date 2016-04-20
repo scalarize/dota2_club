@@ -1,0 +1,21 @@
+div.grid-view table.items th a.asc .caret {
+	border-bottom: 4px solid #000000;
+	border-top: none;
+	display: block;
+}
+div.grid-view table.items th a.desc .caret {
+	border-top: 4px solid #000000;
+	border-bottom:none;
+        display: block;
+}
+a.desc .caret {
+        border-top: 4px solid #000000;
+        border-bottom:none;
+        display: block;
+}
+
+a.asc .caret {
+        border-bottom: 4px solid #000000;
+        border-top: none;
+        display: block;
+}

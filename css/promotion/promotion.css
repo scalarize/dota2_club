@@ -1,0 +1,52 @@
+/*截图展示区样式*/
+.snapshot {
+	width: 120px;
+	height: 210px;
+	cursor:pointer;
+	border:1px solid #D4D4D4;
+	background-repeat: no-repeat;/*将截图作为背景图展示*/
+	background-size:100% auto;
+	margin-right: 3px;
+	margin-top: 3px;
+	float:left;
+}
+/*截图上的删除小图标*/
+.snapshot:hover .icon_remove{
+	background-repeat: no-repeat;
+	background-image: url(/rtb/css/img/icon_remove.png);
+}
+
+.icon_remove {
+    width: 25px;
+    height: 35px;
+    float: right;
+}
+/*上传按钮弹出提示层*/
+.upload_area{
+	position:relative;
+	width:90px;
+}
+.upload_area:hover{
+	border:none
+}
+.upload_area:hover span{
+	height:20px;
+	vertical-align: center;
+	text-align: center;
+}
+.upload_area span{
+	position:absolute;
+	left:0;
+	bottom:0;
+	overflow:hidden;
+	width: 90px;
+	height:0px;
+	background:#000;
+	background: rgba(0, 0, 0, 0.66);
+	color:white;
+	font-size: small;
+}
+.miaozhen_link{
+	margin-left:100px;
+	margin-bottom:5px;
+}

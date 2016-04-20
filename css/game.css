@@ -1,0 +1,57 @@
+img.game-icon-large {
+	width:76px !important;
+	height:76px !important;
+	max-width: none;
+}
+
+img.game-icon-small {
+	width:32px !important;
+	height:32px !important;
+	max-width: none;
+}
+
+tr.has-update {
+	background-color: red;
+}
+
+
+/* General styles for the progress bars */
+table.progress {
+ border: 1px solid #d7d7d7;
+ border-collapse: collapse;
+ border-spacing: 0;
+ box-shadow: 0 0 1em #eee; /* from pre.wiki */
+ /* float: left; */
+ margin: 10px;
+ padding: 0;
+ empty-cells: show;
+ 
+}
+table.progress a, table.progress :link, table.progress :visited,
+table.progress :link:hover, table.progress :visited:hover {
+ border: none;
+ display: block;
+ width: 100%;
+ height: 1.2em;
+ padding: 0;
+ margin: 0;
+ text-decoration: none
+}
+table.progress td { background: #fff; padding: 0 }
+table.progress td.status_0 { background: #f5f5b5 }
+table.progress td.status_1 { background: yellow }
+table.progress td.status_2 { background: #bae0ba }
+table.progress td.status_3 { background: red}
+table.progress td.status_4 { background: black; font-color:white!important; }
+table.progress td :hover { background: none }
+p.percent { 
+ line-height: 1.2em;
+ margin: 0;
+}
+
+div.crawler_status {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid gray;
+	display: block;
+}

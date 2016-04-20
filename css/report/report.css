@@ -1,0 +1,180 @@
+.report_header dfn{
+	width: 5em;
+}
+.report_header label{
+	display: inline-block;
+	margin-right: 1.5em;
+}
+.report_header .custom_date_range {
+	display: none;
+}
+.report_header .custom_date_range .text{
+	width: 7em;
+}
+.report_header .custom_date_range label{
+	display: inline-block;
+	margin-right: 0;
+}
+.report .table_title{
+	margin-top: 2.5em;
+}
+.report .datatable th, .report .datatable td{
+	text-align: right;
+}
+.report .tabbable_light .tab_content{
+	padding: 0px 40px;
+}
+.report .datatable th:first-child, .report .datatable td:first-child{
+	text-align: left;
+}
+.keyvalue{
+	margin-bottom: 2em;
+}
+.keyvalue .pair, .keyvalue p{
+	padding: 6px 0;
+}
+.keyvalue .actions{
+	padding-top: 1em;
+}
+.keyvalue dfn, .keyvalue .key{
+	width: 7em;
+	display: inline-block;
+}
+.keyvalue .key{
+	float: left;
+}
+.keyvalue_longdfn dfn, .keyvalue_longdfn .key{
+	width: 10em;
+}
+.keyvalue .value{
+	margin-left: 7.5em;
+}
+.keyvalue_longdfn .value{
+	margin-left: 10.5em;
+}
+.keyvalue dfn .required, .keyvalue .key .required{
+	color: #f26535;
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	line-height: 14px;
+	margin-left: -10px;
+	margin-top: 6px;
+}
+.keyvalue .pair label, .keyvalue p label{
+	display: inline-block;
+	padding-right: 0.5em;
+}
+.keyvalue .customFileInputWrapper{
+	display: inline-block;
+	top:-1px;
+	vertical-align: middle;
+}
+.keyvalue .important{
+	border-left: 5px solid #f26535;
+	padding: 15px 0 15px 25px;
+	background-color: #f0f0f0;
+	margin-bottom: 20px;
+}
+.keyvalue .important dfn .required, .keyvalue .important .key .required{
+	margin-left: -40px;
+}
+.keyvalue .tip{
+	color: #999;
+}
+
+/** from button.css, tmp */
+.btn_group {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+
+	border: 1px solid #a4a4a4;
+	border-radius: 0.25em;
+	margin-left: 1px;
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.btn_group button, .btn_group .button {
+	position: relative;
+	margin: -1px -1px -1px 0;
+	float: left;
+}
+.btn_group > button:first-child {
+	margin-left: -1px;
+}
+.btn_group > button:not(:first-child):not(:last-child), .btn_group > .button:not(:first-child):not(:last-child) {
+	border-radius: 0;
+}
+.btn_group > button:first-child:not(:last-child), .btn_group > .button:first-child:not(:last-child) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.btn_group > button:last-child:not(:first-child), .btn_group > .button:last-child:not(:first-child) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.btn_group button:not(:active), .btn_group .button:not(:active) {
+	box-shadow: none;
+}
+.btn_group button.current, .btn_group button.current:active {
+	filter:alpha(opacity=70 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#5F5F5F,endcolorstr=#6a6a6a,gradientType=0);
+	-ms-filter:alpha(opacity=70 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#5F5F5F,endcolorstr=#6a6a6a,gradientType=0);/*IE8*/
+	background:#6a6a6a; /* 一些不支持背景渐变的浏览器 */
+	background:-moz-linear-gradient(top, #5F5F5F, #6a6a6a);
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#5F5F5F), to(#6a6a6a));
+	background:-o-linear-gradient(top, #5F5F5F, #6a6a6a);
+	background:linear-gradient(top, #5F5F5F, #6a6a6a);
+
+	color:#fff;
+	-webkit-box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	cursor: default;
+}
+.btn_group_justified {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+.btn_group_justified .btn {
+	display: block;
+	float: none;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}

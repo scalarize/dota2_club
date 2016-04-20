@@ -1,0 +1,349 @@
+.detail_selects{
+	padding-bottom: 20px; 
+	padding-left: 3em;
+	max-width: 480px;
+}
+.detail_selects label{
+	display: inline-block;
+	min-width: 45px;
+	padding-right: 0.5em;
+}
+.customFileInputWrapper{
+	display: inline-block;
+	vertical-align: middle;
+}
+#youku_image_view .preview_list .thumbnail img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.multicreative_app .app_thumb_extras_body{
+	display: none;
+}
+.multi_creatives{
+	width: 456px;
+	margin-top: 0;
+}
+.multi_creatives dt{
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+.multi_creatives .well{
+	margin-left: 0;
+}
+.multi_creatives .top-size{
+	margin-bottom: 10px;
+}
+.multi_creatives .top-size:last-child {
+	margin-bottom: 0;
+}
+.multi_creatives .childsizes_list{
+	list-style: none;
+	background-color: #fff;
+	border-radius: 4px;
+	margin: 0;
+}
+.multi_creatives .upload-group{
+	margin-bottom: 10px;
+	padding: 10px;
+	border-bottom: 1px solid #f5f5f5;
+}
+.multi_creatives .upload-group:last-child{
+	margin-bottom: 0;
+	border-bottom: medium none;
+}
+.multi_creatives .upload-preview{
+	margin-top: 10px;
+	display: none;
+}
+
+/* 百度百川创建创意预览样式 start */
+.preview{
+	margin-left: 60px;
+	padding: 0px;
+	width: 322px;
+	height: auto;
+	border: solid 1px #3686F7;
+	font-size: 16px;
+}
+.preview .header{
+	min-height: 95px;
+	width: 322px;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.header .logoContainer{
+	position: absolute;
+	left: 10px;
+	top: 13px;
+}
+.logoContainer .logo{
+	width: 45px;
+	height: 45px;
+	border-radius: 10px;
+	border: solid 1px rgba(0,0,0,0.2);
+}
+.header .textInfo{
+	position: absolute;
+	left: 63px;
+	top: 17px;
+	color: #222;
+}
+.textInfo .title{
+	margin-bottom: 4px;
+	color: #9FA0A2;
+}
+.textInfo .subTitle{
+	color: #CFD0D2;
+	font-size: 12px;
+}
+.header .rightTop{
+	position: absolute;
+	top: 7px;
+	right: -35px;
+	width: 83px;
+	height: 24px;
+	background-color: #39A8F5;
+	font-size: 12px;
+	color: #fff;
+	-webkit-transform-origin: 50% 0;
+	-webkit-transform: rotate(45deg);
+}
+.rightTop span{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 0px;
+}
+.header .desc{
+	color: #6F7072;
+	padding-left: 10px;
+	margin-top: 70px;
+	margin-bottom:5px;
+}
+.preview .mainContent{
+	display: block;
+}
+.preview .mainContent img{
+	width: 322px;
+	height: 140px;
+	display: block;
+}
+.preview .footer{
+	height: 50px;
+	background-color: #fff;
+	margin: 10px 30%;
+}
+.footer button{
+	font-size:18px;
+	width: 112px;
+	height: 38px;
+	border: solid 1px #3686F7;
+	box-shadow: inset 0px 0px 2px rgba(255,255,255,0.6);
+	outline: none;
+	border-radius: 2px;
+	background-color: #3686F7;
+	color: #fff;
+	-webkit-user-select: none;
+}
+/* 百度百川创建创意预览样式 end */
+
+/* 程序化创意显示效果 start */
+.creative_container{
+	width: 114px;
+	height: auto;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	margin-left: 10px;
+}
+.creative_container .selected{
+	max-width:114px;
+	cursor:pointer; 
+}
+.creative_container .creative_over{
+	font-size: 24px;
+	background-color: #000;
+	color: #fff;
+	text-align:center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.5;
+}
+.creative_dd_dt {
+	margin-bottom: 5px;
+}
+.choose_strategy {
+	margin-bottom: 3px;
+}
+.form-actions{
+	padding-left:10px;
+}
+.check_all_list{
+	margin-top: 0px;
+}
+.check_all_list dt{
+	margin-bottom: 5px;
+}
+.check_all_list dt select{
+	width: 100px;
+}
+.check_all_list dd{
+	padding-top: 10px;
+	margin-left: 0;
+	max-width: 600px;
+}
+#creative_filter_list .checkbox.inline{
+	margin-left: 0px;
+	margin-right: 1em;
+	min-width: 5em;
+}
+#ad_standard label{
+	display: inline-block;
+}
+#ad_standard .checkbox{
+	padding-top: 5px;
+	margin-right: 1em;
+	min-width: 350px;
+}
+.creative_list{
+	margin: 20px 0;
+	width:100%;
+}
+.creative_list li{
+	display: inline-table;
+	list-style-type: none;
+	margin: 10px 2px;
+	padding: 4px;
+	min-width: 210px;
+}
+.creative_attr{
+	display: -webkit-box;
+	display: flex;
+	align-items: center;
+}
+.creative_attr span {
+	width: 60px;
+	text-align: right;
+	vertical-align: middle;
+	display: inline-block;
+}
+.creative_attr textarea{
+	width:140px;
+	resize:none; 
+	margin-top:5px;
+}
+.creative_border{
+	border: 1px solid red;
+}
+/* 程序化创意显示效果 end */
+
+.google_preview{
+	margin-left: 66px;
+	padding: 0px;
+	width: 400px;
+	height: 80px;
+	border: solid 1px #B5B8BD;
+	font-size: 16px;
+}
+
+.google_preview .preview_area {
+	height: 80px;
+	background-color: #fff;
+	position: absolute;
+}
+.preview_area .logo_div {
+	margin-top:5px;
+	margin-left: 5px;
+	width:70px;
+	height:70px;
+	float:left;
+	border: solid 1px #CCC4D4;
+}
+.preview_area .rightArea {
+	position: absolute;
+	left: 90px;
+	top: 13px;
+	color: #222;
+}
+ .rightArea .title_div {
+	width:200px;	
+	overflow:hidden;
+}
+.google_preview .desc_div {
+	margin-bottom: 4px;
+	color: #9FA0A2;
+}
+.desc_div .desc_text{
+	width:200px;
+	font-size:small;
+	word-wrap: break-word;
+	word-break: normal;
+}
+.google_preview .desc_div {
+	margin-bottom: 4px;
+	color: #9FA0A2;
+}
+.google_preview .promote_div {
+	margin-top: 55px;
+	margin-left: 360px;	
+	height: 18px;
+	position: absolute;
+	width: 28px;
+	position: absolute;
+	border: solid 1px #7A7E84;
+	font-size:small;
+	border-radius:3px;
+	color:#9C99A7;
+}
+.google_preview .ad_chocie_div {
+	margin-left: 340px;	
+	height: 18px;
+	position: absolute;
+	width: 60px;
+	position: absolute;
+	border:  1px #7A7E84;
+	font-size:small;
+	color: #1C86DE;
+	border-radius:3px;
+	background-color: #CBCCCB;
+}
+.google_preview .button_div {
+	border: 1px solid #E8E8E8;
+	-webkit-border-top-left-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	color: #151515;
+	-webkit-border-bottom-right-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	height: 30px;
+	width:80px;
+	margin-top:5px;
+	overflow:hidden;
+}
+.button_div .button {
+	text-align: center;
+	margin-top: 6px;
+}
+
+.youku_material_type {
+	margin-left: 70px;
+	margin-top: 5px;
+}
+.youku_tab {
+	width: 500px;
+}
+.icon-eye-open{                                                                                                                                                                                                                                
+	cursor:pointer;
+}
+.creative_container .popover{
+	max-width:400px;
+}
+.check_all_title .modal {
+	width:1170px;
+	height:auto;
+	left:auto;
+	margin-right: auto;
+	margin-left: auto;
+}

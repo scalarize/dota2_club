@@ -1,0 +1,17 @@
+
+#bannerList {
+}
+
+#bannerList img {
+	width: 480px;
+	height: 162px;
+	display: block;
+	border: 0;
+	text-align : center;
+}
+
+#bannerList span{
+	padding: 10px;
+	border : 1px gray bold;
+	display: block;
+}

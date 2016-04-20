@@ -1,0 +1,34 @@
+.uploadbar {
+	/** border-bottom: 1px dotted #515151; */
+	margin: 0 20px;
+	padding: 20px 0;
+}
+.uploadbar .btnbox {
+	float: left;
+	width: 320px;
+}
+.uploadbar .btntext {
+	float: left;
+}
+.uploadbar button {
+	width: 300px;
+	height: 60px;
+	font-size: 16px;
+}
+
+.form .note {
+	margin-left: 10px;
+	display: block;
+}
+.form .row {
+	margin-left: 10px;
+	display: inline-block;
+	min-width: 40%;
+}
+.form .block {
+	display: block;
+}
+.form label {
+	display: inline-block;
+	min-width: 140px;
+}

@@ -1,0 +1,15 @@
+.selected {
+	background-color:#FFFFFF;
+	border:1px solid #e8e8e8;
+	text-align: left;
+}
+.selected_uneditable {
+	cursor:not-allowed;
+	background-color:#fcfcfc;
+	border:1px solid #e8e8e8;
+	text-align: left;
+}
+.selected:hover {
+	border-color: #f40;
+	color: #666;
+}

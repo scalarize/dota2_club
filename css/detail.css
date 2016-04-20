@@ -1,0 +1,46 @@
+.company-detail-right {
+	float: right;
+}
+
+.company-update-time {
+	font-size: 13px;
+	margin-right: 15px;
+	color: rgb(161, 161, 161);
+}
+
+table.detail-view {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	padding: 2px;
+}   
+	
+.detail-view th {
+	width: 15%;
+	height: 25px;
+}
+
+#company_history .gridview-item-list {
+	word-wrap: break-word;
+	table-layout: fixed;
+}
+
+.history_header_domob {
+	width: 10%;
+}
+
+.history_header_optype {
+	width: 7%;
+}
+ 
+.history_header_admin {
+	width: 10%;
+}
+
+.history_header_optime {
+	width: 10%;
+}
+
+.history_header_note {
+	width: 53%;
+}

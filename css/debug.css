@@ -1,0 +1,45 @@
+.debug_sidebar_container{
+	padding:10px 5px 0px 5px;
+}
+.debug_siderbar_unit{
+	word-wrap: break-word;
+	width: 275px;
+	font-size: smaller;
+	border: 1px solid #F5F0F0;
+	padding: 3px;
+	border-radius: 3px;
+	margin-top: 2px;
+}
+.debug_title{
+	border: 1px solid #F5F0F0;
+	background: #FFFAFA;
+	border-radius: 3px;
+	padding: 5px;
+}
+.debug_time_cost {
+	background: azure;
+}
+.debug_info {
+	background: #EEF3EA;
+}
+.debug_foot{
+	border: 1px solid #F0ECF5;
+	background: #FFFAFA;
+	border-radius: 3px;
+	font-size: 9px;
+	padding: 2px;
+	margin-top: 3px;
+}
+.cost_time_success{
+	color:green;
+}
+.cost_time_warning{
+	color:orange;
+}
+.cost_time_error{
+	color:red;
+}
+.debug_pre{
+	font-size: 10px;
+	line-height: 1;
+}

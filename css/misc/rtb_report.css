@@ -1,0 +1,81 @@
+/*_rtbReport_grid*/
+.grid-view table.items th a.desc .caret {
+	border-bottom:none;
+	border-top:4px solid #000000;
+	display:block;
+}
+.grid-view table.items th a.asc .caret {
+	border-bottom:4px solid #000000;
+	border-top:none;
+	display:block;
+}
+.grid-view table.items th a .caret {
+	right:-10px;
+}
+.even{
+	background:#eeeeee;
+}
+.detail{
+	font-size:12px;
+	text-decoration:underline;
+}
+.grid-view{
+	overflow-x: scroll;
+}
+.top_scroll_bar{
+	overflow-x: scroll;
+	height:10px;
+}
+.top_scroll_bar div{
+	width: 2170px;
+	height:10px;
+}
+/*rtbReport*/
+.dropdown-checkBox .controls{
+	 margin-left:10px;
+}
+.dropdown-checkBox hr{
+	margin:8px 0;
+}
+.grid-view table td,.grid-view table th{
+	text-align:right;
+}
+div.tooltip {
+	min-width: 150px;
+}
+
+div.tooltip-inner {
+    max-width: 780px;
+}
+.grid-view table.items th {
+	white-space:nowrap;
+}
+.titleRequired:hover{
+	text-decoration:none;
+}
+.nowrap{
+	white-space:nowrap;
+}
+.consultant_left li,
+.consultant_right li
+{
+	padding:3px 20px;
+}
+.consultant_right li{
+	margin-left:10px;
+}
+.consultant_left li a,.consultant_right li a{
+	color:#333;
+}
+/*自定义列*/
+.t_even{
+	float:left;
+	width:80px;
+}
+.t_odd{
+	display:inline-flex;
+	width:80px;
+}
+i{
+	cursor: pointer;
+}

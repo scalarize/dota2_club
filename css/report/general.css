@@ -1,0 +1,74 @@
+.list {
+	padding: 0px;
+	margin: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 100%;
+	border:1px solid #d2d6d9;
+}
+
+.list th {
+	background-color: #8EB31A;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	padding-top: 4px;
+	border:1px solid #d2d6d9;
+	text-align: center;
+}
+
+.list td { 
+	border-top: 1px solid #d2d6d9;
+	padding: 6px;
+	font-size: 14px;
+	color: #000;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-right:1px solid #8eb31a;
+}
+
+.list .odd td {
+	background-color: #FFF;
+}
+
+.list .even td {
+	background-color: #F0F9D6;
+}
+
+.footer {
+	border-top: 2px solid #8EB31A;
+}
+
+span.n {
+	color: #000000
+}
+
+span.r {
+	color: #FF0000
+}
+
+span.g {
+	color: #00AA00
+}
+
+div.comment {
+	font-size: 14px;
+	color: #000;
+}
+
+span.ct {
+	font-weight:bold;
+	color: #0000CC
+}
+
+.list th.hover {
+	cursor: pointer;
+	background-color: #666;
+}
+
+.list th.sorted {
+	background-color: #000;
+}
+

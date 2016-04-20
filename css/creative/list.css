@@ -1,0 +1,46 @@
+.radio {
+    margin : 5px;
+}
+
+.reportCondition {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.creativeSizeFilter {
+	margin-bottom:0 !important;
+}
+.creativeSizeFilter a {
+	color:#000;
+}
+.creativeSizeFilter a .caret {
+	display:block !important;
+	left: 60px;
+	top: 2px !important;
+}
+.disable_button{
+	 color: #9FA1A2; 
+	  text-decoration:none;
+}
+.disable_button a{
+	 color: #9FA1A2;
+	 text-decoration:none;
+}
+.disable_button:hover {
+	 color: #9FA1A2;
+	 text-decoration:none;
+}
+.disable_button:focus {
+	 color: #9FA1A2;
+	 text-decoration:none;
+}
+.disable_button:visited  {
+	 color: #9FA1A2;
+	 text-decoration:none;
+}
+.disable_button:active  {
+	 color: #9FA1A2;
+	 text-decoration:none;
+}
+th{
+	white-space: nowrap;
+}

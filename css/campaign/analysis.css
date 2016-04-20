@@ -1,0 +1,563 @@
+/** vim: set sw=4 ts=4 noet fdm=indent */
+.report_header dfn{
+	width: 5em;
+}
+.report_header label{
+	display: inline-block;
+	margin-right: 1.5em;
+}
+.report_header .custom_date_range {
+	display: none;
+}
+.report_header .custom_date_range .text{
+	width: 7em;
+}
+.report_header .custom_date_range label{
+	display: inline-block;
+	margin-right: 0;
+}
+.report .table_title{
+	margin-top: 2.5em;
+}
+.report .datatable th, .report .datatable td{
+	text-align: right;
+}
+.report .tabbable_light .tab_content{
+	padding: 30px 40px;
+}
+.report .datatable th:first-child, .report .datatable td:first-child{
+	text-align: left;
+}
+.keyvalue{
+	margin-bottom: 2em;
+}
+.keyvalue .pair, .keyvalue p{
+	padding: 6px 0;
+}
+.keyvalue .actions{
+	padding-top: 1em;
+}
+.keyvalue dfn, .keyvalue .key{
+	width: 7em;
+	display: inline-block;
+}
+.keyvalue .key{
+	float: left;
+}
+.keyvalue_longdfn dfn, .keyvalue_longdfn .key{
+	width: 10em;
+}
+.keyvalue .value{
+	margin-left: 7.5em;
+}
+.keyvalue_longdfn .value{
+	margin-left: 10.5em;
+}
+.keyvalue dfn .required, .keyvalue .key .required{
+	color: #f26535;
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	line-height: 14px;
+	margin-left: -10px;
+	margin-top: 6px;
+}
+.keyvalue .pair label, .keyvalue p label{
+	display: inline-block;
+	padding-right: 0.5em;
+}
+.keyvalue .customFileInputWrapper{
+	display: inline-block;
+	top:-1px;
+	vertical-align: middle;
+}
+.keyvalue .important{
+	border-left: 5px solid #f26535;
+	padding: 15px 0 15px 25px;
+	background-color: #f0f0f0;
+	margin-bottom: 20px;
+}
+.keyvalue .important dfn .required, .keyvalue .important .key .required{
+	margin-left: -40px;
+}
+.keyvalue .tip{
+	color: #999;
+}
+
+/** from button.css, tmp */
+.btn_group {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+
+	border: 1px solid #a4a4a4;
+	border-radius: 0.25em;
+	margin-left: 1px;
+	-webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.btn_group button, .btn_group .button {
+	position: relative;
+	margin: -1px -1px -1px 0;
+	float: left;
+}
+.btn_group > button:first-child {
+	margin-left: -1px;
+}
+.btn_group > button:not(:first-child):not(:last-child), .btn_group > .button:not(:first-child):not(:last-child) {
+	border-radius: 0;
+}
+.btn_group > button:first-child:not(:last-child), .btn_group > .button:first-child:not(:last-child) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.btn_group > button:last-child:not(:first-child), .btn_group > .button:last-child:not(:first-child) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.btn_group button:not(:active), .btn_group .button:not(:active) {
+	box-shadow: none;
+}
+.btn_group button.current, .btn_group button.current:active {
+	filter:alpha(opacity=70 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#5F5F5F,endcolorstr=#6a6a6a,gradientType=0);
+	-ms-filter:alpha(opacity=70 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#5F5F5F,endcolorstr=#6a6a6a,gradientType=0);/*IE8*/
+	background:#6a6a6a; /* 一些不支持背景渐变的浏览器 */
+	background:-moz-linear-gradient(top, #5F5F5F, #6a6a6a);
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#5F5F5F), to(#6a6a6a));
+	background:-o-linear-gradient(top, #5F5F5F, #6a6a6a);
+	background:linear-gradient(top, #5F5F5F, #6a6a6a);
+
+	color:#fff;
+	-webkit-box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	cursor: default;
+}
+.btn_group_justified {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+.btn_group_justified .btn {
+	display: block;
+	float: none;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}
+div.chart {
+	display: inline;
+	float: left;
+}
+
+div#creative_selection {
+    width: 30%;
+    display: inline;
+}
+div.views {
+	/** position: fixed;
+	top: 50px;
+	z-index: 444444; */
+	margin-bottom: 16px;
+    width: 70%;
+}
+
+div.pie_dist {
+	display:inline-block;
+}
+
+div.polar_ability {
+	margin-left: 48px;
+	display:inline-block;
+	min-width: 500px;
+	max-width: 550px;
+	height: 400px;
+}
+
+#pie_dist span.btn-apt-1 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #589ae4;
+	*background-color: #69abf5;
+	background-image: -moz-linear-gradient(top, #589ae4, #69abf5);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#589ae4), to(#69abf5));
+	background-image: -webkit-linear-gradient(top, #589ae4, #69abf5);
+	background-image: -o-linear-gradient(top, #589ae4, #69abf5);
+	background-image: linear-gradient(to bottom, #589ae4, #69abf5);
+	background-repeat: repeat-x;
+	border-color: #69abf5 #69abf5 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff589ae4', endColorstr='#ff69abf5', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-1:hover,
+#pie_dist .btn-apt-1:focus,
+#pie_dist .btn-apt-1:active,
+#pie_dist .btn-apt-1.active,
+#pie_dist .btn-apt-1.disabled,
+#pie_dist .btn-apt-1[disabled] {
+	color: #ffffff;
+	background-color: #69abf5;
+	*background-color: #609be0;
+}
+
+#pie_dist span.btn-apt-2 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #f3cf4a;
+	*background-color: #f4e05b;
+	background-image: -moz-linear-gradient(top, #f3cf4a, #f4e05b);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f3cf4a), to(#f4e05b));
+	background-image: -webkit-linear-gradient(top, #f3cf4a, #f4e05b);
+	background-image: -o-linear-gradient(top, #f3cf4a, #f4e05b);
+	background-image: linear-gradient(to bottom, #f3cf4a, #f4e05b);
+	background-repeat: repeat-x;
+	border-color: #f4e05b #f4e05b #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff3cf4a', endColorstr='#fff4e05b', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-2:hover,
+#pie_dist .btn-apt-2:focus,
+#pie_dist .btn-apt-2:active,
+#pie_dist .btn-apt-2.active,
+#pie_dist .btn-apt-2.disabled,
+#pie_dist .btn-apt-2[disabled] {
+	color: #ffffff;
+	background-color: #f4e05b;
+	*background-color: #f0d040;
+}
+
+#pie_dist span.btn-apt-3 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #df7e72;
+	*background-color: #f08f83;
+	background-image: -moz-linear-gradient(top, #df7e72, #f08f83);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#df7e72), to(#f08f83));
+	background-image: -webkit-linear-gradient(top, #df7e72, #f08f83);
+	background-image: -o-linear-gradient(top, #df7e72, #f08f83);
+	background-image: linear-gradient(to bottom, #df7e72, #f08f83);
+	background-repeat: repeat-x;
+	border-color: #f08f83 #f08f83 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdf7e72', endColorstr='#fff08f83', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-3:hover,
+#pie_dist .btn-apt-3:focus,
+#pie_dist .btn-apt-3:active,
+#pie_dist .btn-apt-3.active,
+#pie_dist .btn-apt-3.disabled,
+#pie_dist .btn-apt-3[disabled] {
+	color: #ffffff;
+	background-color: #f08f83;
+	*background-color: #ea7f70;
+}
+
+#pie_dist span.btn-apt-4 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #16aad5;
+	*background-color: #27bbe6;
+	background-image: -moz-linear-gradient(top, #16aad5, #27bbe6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#16aad5), to(#27bbe6));
+	background-image: -webkit-linear-gradient(top, #16aad5, #27bbe6);
+	background-image: -o-linear-gradient(top, #16aad5, #27bbe6);
+	background-image: linear-gradient(to bottom, #16aad5, #27bbe6);
+	background-repeat: repeat-x;
+	border-color: #27bbe6 #27bbe6 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff16aad5', endColorstr='#ff27bbe6', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-4:hover,
+#pie_dist .btn-apt-4:focus,
+#pie_dist .btn-apt-4:active,
+#pie_dist .btn-apt-4.active,
+#pie_dist .btn-apt-4.disabled,
+#pie_dist .btn-apt-4[disabled] {
+	color: #ffffff;
+	background-color: #27bbe6;
+	*background-color: #20abd0;
+}
+
+#pie_dist span.btn-apt-5 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #808ee8;
+	*background-color: #9a9ff9;
+	background-image: -moz-linear-gradient(top, #808ee8, #9a9ff9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#808ee8), to(#9a9ff9));
+	background-image: -webkit-linear-gradient(top, #808ee8, #9a9ff9);
+	background-image: -o-linear-gradient(top, #808ee8, #9a9ff9);
+	background-image: linear-gradient(to bottom, #808ee8, #9a9ff9);
+	background-repeat: repeat-x;
+	border-color: #9a9ff9 #9a9ff9 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff808ee8', endColorstr='#ff9a9ff9', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-5:hover,
+#pie_dist .btn-apt-5:focus,
+#pie_dist .btn-apt-5:active,
+#pie_dist .btn-apt-5.active,
+#pie_dist .btn-apt-5.disabled,
+#pie_dist .btn-apt-5[disabled] {
+	color: #ffffff;
+	background-color: #9a9ff9;
+	*background-color: #908fe0;
+}
+
+#pie_dist span.btn-apt-6 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #efa965;
+	*background-color: #ffba76;
+	background-image: -moz-linear-gradient(top, #efa965, #ffba76);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#efa965), to(#ffba76));
+	background-image: -webkit-linear-gradient(top, #efa965, #ffba76);
+	background-image: -o-linear-gradient(top, #efa965, #ffba76);
+	background-image: linear-gradient(to bottom, #efa965, #ffba76);
+	background-repeat: repeat-x;
+	border-color: #ffba76 #ffba76 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffefa965', endColorstr='#ffffba76', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-6:hover,
+#pie_dist .btn-apt-6:focus,
+#pie_dist .btn-apt-6:active,
+#pie_dist .btn-apt-6.active,
+#pie_dist .btn-apt-6.disabled,
+#pie_dist .btn-apt-6[disabled] {
+	color: #ffffff;
+	background-color: #ffba76;
+	*background-color: #f8aa60;
+}
+
+#pie_dist span.btn-apt-7 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #07b5b6;
+	*background-color: #18c6c7;
+	background-image: -moz-linear-gradient(top, #07b5b6, #18c6c7);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#07b5b6), to(#18c6c7));
+	background-image: -webkit-linear-gradient(top, #07b5b6, #18c6c7);
+	background-image: -o-linear-gradient(top, #07b5b6, #18c6c7);
+	background-image: linear-gradient(to bottom, #07b5b6, #18c6c7);
+	background-repeat: repeat-x;
+	border-color: #18c6c7 #18c6c7 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff07b5b6', endColorstr='#ff18c6c7', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-7:hover,
+#pie_dist .btn-apt-7:focus,
+#pie_dist .btn-apt-7:active,
+#pie_dist .btn-apt-7.active,
+#pie_dist .btn-apt-7.disabled,
+#pie_dist .btn-apt-7[disabled] {
+	color: #ffffff;
+	background-color: #18c6c7;
+	*background-color: #10b6b0;
+}
+
+#pie_dist span.btn-apt-8 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #84d759;
+	*background-color: #95e86a;
+	background-image: -moz-linear-gradient(top, #84d759, #95e86a);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#84d759), to(#95e86a));
+	background-image: -webkit-linear-gradient(top, #84d759, #95e86a);
+	background-image: -o-linear-gradient(top, #84d759, #95e86a);
+	background-image: linear-gradient(to bottom, #84d759, #95e86a);
+	background-repeat: repeat-x;
+	border-color: #95e86a #95e86a #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff84d759', endColorstr='#ff95e86a', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-8:hover,
+#pie_dist .btn-apt-8:focus,
+#pie_dist .btn-apt-8:active,
+#pie_dist .btn-apt-8.active,
+#pie_dist .btn-apt-8.disabled,
+#pie_dist .btn-apt-8[disabled] {
+	color: #ffffff;
+	background-color: #95e86a;
+	*background-color: #90d850;
+}
+
+#pie_dist span.btn-apt-9 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #00c397;
+	*background-color: #11d4a8;
+	background-image: -moz-linear-gradient(top, #00c397, #11d4a8);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00c397), to(#11d4a8));
+	background-image: -webkit-linear-gradient(top, #00c397, #11d4a8);
+	background-image: -o-linear-gradient(top, #00c397, #11d4a8);
+	background-image: linear-gradient(to bottom, #00c397, #11d4a8);
+	background-repeat: repeat-x;
+	border-color: #11d4a8 #11d4a8 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00c397', endColorstr='#ff11d4a8', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-9:hover,
+#pie_dist .btn-apt-9:focus,
+#pie_dist .btn-apt-9:active,
+#pie_dist .btn-apt-9.active,
+#pie_dist .btn-apt-9.disabled,
+#pie_dist .btn-apt-9[disabled] {
+	color: #ffffff;
+	background-color: #11d4a8;
+	*background-color: #0ac490;
+}
+
+#pie_dist span.btn-apt-10 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #b085d2;
+	*background-color: #c196e3;
+	background-image: -moz-linear-gradient(top, #b085d2, #c196e3);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b085d2), to(#c196e3));
+	background-image: -webkit-linear-gradient(top, #b085d2, #c196e3);
+	background-image: -o-linear-gradient(top, #b085d2, #c196e3);
+	background-image: linear-gradient(to bottom, #b085d2, #c196e3);
+	background-repeat: repeat-x;
+	border-color: #c196e3 #c196e3 #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb085d2', endColorstr='#ffc196e3', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-10:hover,
+#pie_dist .btn-apt-10:focus,
+#pie_dist .btn-apt-10:active,
+#pie_dist .btn-apt-10.active,
+#pie_dist .btn-apt-10.disabled,
+#pie_dist .btn-apt-10[disabled] {
+	color: #ffffff;
+	background-color: #c196e3;
+	*background-color: #b886d0;
+}
+
+#pie_dist span.btn-apt-11 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #d47caa;
+	*background-color: #e58dbb;
+	background-image: -moz-linear-gradient(top, #d47caa, #e58dbb);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d47caa), to(#e58dbb));
+	background-image: -webkit-linear-gradient(top, #d47caa, #e58dbb);
+	background-image: -o-linear-gradient(top, #d47caa, #e58dbb);
+	background-image: linear-gradient(to bottom, #d47caa, #e58dbb);
+	background-repeat: repeat-x;
+	border-color: #e58dbb #e58dbb #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd47caa', endColorstr='#ffe58dbb', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-11:hover,
+#pie_dist .btn-apt-11:focus,
+#pie_dist .btn-apt-11:active,
+#pie_dist .btn-apt-11.active,
+#pie_dist .btn-apt-11.disabled,
+#pie_dist .btn-apt-11[disabled] {
+	color: #ffffff;
+	background-color: #e58dbb;
+	*background-color: #dc7da0;
+}
+
+#pie_dist span.btn-apt-12 {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #38acec;
+	*background-color: #49bdfd;
+	background-image: -moz-linear-gradient(top, #38acec, #49bdfd);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#38acec), to(#49bdfd));
+	background-image: -webkit-linear-gradient(top, #38acec, #49bdfd);
+	background-image: -o-linear-gradient(top, #38acec, #49bdfd);
+	background-image: linear-gradient(to bottom, #38acec, #49bdfd);
+	background-repeat: repeat-x;
+	border-color: #49bdfd #49bdfd #1f6377;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff38acec', endColorstr='#ff49bdfd', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+#pie_dist .btn-apt-12:hover,
+#pie_dist .btn-apt-12:focus,
+#pie_dist .btn-apt-12:active,
+#pie_dist .btn-apt-12.active,
+#pie_dist .btn-apt-12.disabled,
+#pie_dist .btn-apt-12[disabled] {
+	color: #ffffff;
+	background-color: #49bdfd;
+	*background-color: #40ade0;
+}
+
+#pie_dist label.apt {
+    color: #303030;
+}
+
+#pie_dist label.apt-current {
+    color: #488AC7;
+}
+
+div#act_dist_holder {
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+    padding: 20px;
+}
+
+div.pie_act {
+	display:inline-block;
+}

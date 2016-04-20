@@ -1,0 +1,89 @@
+.left_content{
+    overflow-y : auto;
+    height: 600px;
+}
+
+.ui-sortable .moved {background-color: #85DF12}  
+.ui-sortable .deleted {background-color: gray}  
+.ui-sortable .added {background-color: #F5DF41}  
+
+.list-view .moved {background-color: #85DF12}  
+.list-view .deleted {background-color: gray}  
+.list-view .added {background-color: #F5DF41}  
+
+.ui-sortable .hotgame {
+	background-color:#E67E22;
+}
+
+.ui-sortable-placeholder {
+	height: 140px;
+	width: 190px;
+}
+
+td.rank_new {
+	background-color: green
+}
+td.rank_both {
+	background-color: gray
+}
+td.rank_old {
+	background-color: yellow
+}
+.ad-icon-small{
+    width : 45px;
+    height : 45px;
+}
+.ad-icon-normal{
+    width : 90px;
+    height : 90px;
+}
+.ad-icon-large{
+    width : 120px;
+    height : 120px;
+}
+.media{
+    cursor : move;
+}
+
+.title{
+    width : 65px;
+    display : inline-block;
+}
+.item{
+    text-align : -webkit-center;
+}
+.carousel-image{
+    width : 180px;
+    height : 320px;
+}
+#ad_description{
+    margin-left : 40px;
+    width : 350px;
+}
+.modal.fade{
+    display:none;
+}
+.color-box{
+    width : 10px;
+    height : 10px;
+    display : inline-block;
+}
+.color-box.deleted{
+    background-color : gray; 
+}
+.color-box.moved{
+    background-color : #85DF12; 
+}
+.color-box.added{
+    background-color : #F5DF41; 
+}
+.nav.nav-tabs{
+    margin-left : 30px;
+}
+.placement{
+    margin-left : 30px;
+}
+.placement .title{
+    width : 120px;
+    font-weight : bold;
+}
