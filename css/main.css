@@ -146,3 +146,10 @@ body{
 	position:relative;
 	float:left;
 }
+
+tr.win {
+	background-color: #CAF9E3;
+}
+tr.lose {
+	background-color: #F5F5DE;
+}

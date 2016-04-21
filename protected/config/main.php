@@ -128,7 +128,12 @@ return array(
 			),
 		),
 		// 默认时间格式是'年/月/日', 如'2011/8/10'. But... 还是 '2011-8-10' 顺眼一点...
-		'format'=>array('dateFormat'=>'Y-m-d'),
+		'format'=>array(
+			'dateFormat'=>'Y-m-d',
+			'numberFormat' => array(
+				'decimals' => 1,
+			),
+		),
 	),
 	'params'=> require_once($WEB_BASE_DIR.'/protected/config/config_params.php'),
 );

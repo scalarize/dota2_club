@@ -35,6 +35,10 @@ class Controller extends CController
 				'label' => '全部选手',
 				'url' => '/player/',
 			),
+			array(
+				'label' => '出场英雄',
+				'url' => '/hero/',
+			),
 		);
 	}
 

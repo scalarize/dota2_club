@@ -94,13 +94,21 @@ class PlayerController extends Controller
 		));
 	}
 
-
 	public function actionIndex()
 	{
-		$players = SteamPlayerModel::model('SteamPlayerModel')->findAll();
+		$players = array();
+		foreach (SteamPlayerModel::model('SteamPlayerModel')->findAll() as $player) {
+			if ($player->attendance > 0) $players []= $player;
+		}
+		usort($players, array($this, 'sortByScore'));
 		$this->render('index', array(
 			'players' => $players,
 		));
+	}
+
+	public function sortByScore($a, $b)
+	{
+		return $b->score - $a->score;
 	}
 
 }

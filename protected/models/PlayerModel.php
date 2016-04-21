@@ -100,6 +100,11 @@ class PlayerModel extends PlayerRecord
 		return $rank;
 	}
 
+	public function getRankDiff()
+	{
+		return $this->currentRank - $this->rank_score;
+	}
+
 	public function getAttributes($names = true)
 	{
 		$ret = parent::getAttributes($names);
@@ -127,7 +132,13 @@ class PlayerModel extends PlayerRecord
 		return $win;
 	}
 
+	public function getWinrate($season = '2016s2')
+	{
+		$winrate = $this->getWin($season) * 1.0 / max(1, $this->getAttendance($season));
+		return $winrate * 100.0;
+	}
+
 }
 
-/** vim: set fdm=indent :
+/** vim: set fdm=indent : */
 

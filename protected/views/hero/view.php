@@ -2,24 +2,19 @@
 
 $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 	'links' => array(
-		'全部选手' => '/player/',
-		$model->name,
+		'出场英雄' => '/hero/',
+		$model->chinese_name,
 	),
 ));
 
 $this->widget('bootstrap.widgets.TbDetailView', array(
 	'data' => $model,
 	'attributes' => array(
+		'id',
 		'name',
-		'form',
-		'rank_score',
-		'currentRank',
-		'score',
+		'chinese_name',
 		'attendance',
 		'win',
-		'kda',
-		'gpm',
-		'xpm',
 	),
 ));
 
@@ -51,10 +46,10 @@ $columns = array(
 		'htmlOptions' => array('style' => 'width: 120px'),
 	),
 	array(
+		'header' => '使用者',
 		'class' => 'CLinkColumn',
-		'header' => '出场英雄',
-		'urlExpression' => '"/hero/" . $data->hero->id',
-		'labelExpression' => '$data->hero->chinese_name',
+		'urlExpression' => '"/player/" . $data->player->id',
+		'labelExpression' => '$data->player->name',
 		'headerHtmlOptions' => array('style' => 'width: 160px'),
 		'htmlOptions' => array('style' => 'width: 160px'),
 	),
@@ -96,8 +91,9 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 	'dataProvider' => new CArrayDataProvider(array_reverse($model->matches), array(
 		'pagination' => false,
 	)),
-	'columns' => $columns,
 	'rowCssClassExpression' => '$data->win > 0 ? "win" : "lose"',
+	'columns' => $columns,
 	'htmlOptions' => array('style' => 'table-layout: fixed'),
 ));
 
+/** vim: set fdm=indent: */
