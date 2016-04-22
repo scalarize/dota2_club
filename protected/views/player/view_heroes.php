@@ -1,5 +1,3 @@
-<h2>D.O.T.A. 出场英雄</h2>
-
 <?php
 $columns = array(
 	array(
@@ -11,8 +9,8 @@ $columns = array(
 	array(
 		'class' => 'CLinkColumn',
 		'header' => '',
-		'urlExpression' => '"/hero/" . $data->id',
-		'labelExpression' => '$data->chinese_name',
+		'urlExpression' => '"/hero/" . $data->hero->id',
+		'labelExpression' => '$data->hero->chinese_name',
 		'headerHtmlOptions' => array('style' => 'width: 100px'),
 		'htmlOptions' => array('style' => 'width: 120px'),
 	),
@@ -51,7 +49,7 @@ $columns = array(
 );
 
 $this->widget('bootstrap.widgets.TbGridView', array(
-	'dataProvider' => new CArrayDataProvider($heroes, array(
+	'dataProvider' => new CArrayDataProvider($model->heroes, array(
 		'pagination' => false,
 		'sort' => array(
 			'attributes' => array(

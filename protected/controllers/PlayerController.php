@@ -20,45 +20,13 @@ class PlayerController extends Controller
 	public function actionTeammates($id)
 	{
 		$player = $this->loadPlayer($id);
-		$teammates = array();
-		foreach ($player->matches as $match) {
-			$players = $match->players;
-			$key = $match->win > 0 ? 'win' : 'lose';
-			foreach ($players[$match->side] as $p) {
-				if ($p->id == $player->id) continue;
-				if (isset($teammates[$p->id])) {
-					$teammates[$p->id][$key] += 1;
-				} else {
-					$teammates[$p->id] = $p->attributes;
-					$teammates[$p->id]['win'] = 0;
-					$teammates[$p->id]['lose'] = 0;
-					$teammates[$p->id][$key] = 1;
-				}
-			}
-		}
-		$this->renderJson(array('basic' => $player->attributes, 'teammates' => $teammates));
+		$this->renderJson(array('basic' => $player->attributes, 'teammates' => $player->teammates));
 	}
 
 	public function actionOpponents($id)
 	{
 		$player = $this->loadPlayer($id);
-		$opponents = array();
-		foreach ($player->matches as $match) {
-			$players = $match->players;
-			$key = $match->win > 0 ? 'lose' : 'win';
-			foreach ($players[1 - $match->side] as $p) {
-				if ($p->id == $player->id) continue;
-				if (isset($opponents[$p->id])) {
-					$opponents[$p->id][$key] += 1;
-				} else {
-					$opponents[$p->id] = $p->attributes;
-					$opponents[$p->id]['win'] = 0;
-					$opponents[$p->id]['lose'] = 0;
-					$opponents[$p->id][$key] = 1;
-				}
-			}
-		}
-		$this->renderJson(array('basic' => $player->attributes, 'opponents' => $opponents));
+		$this->renderJson(array('basic' => $player->attributes, 'opponents' => $player->opponents));
 	}
 
 	public function actionHistory($id)
@@ -89,6 +57,7 @@ class PlayerController extends Controller
 	public function actionView($id)
 	{
 		$player = $this->loadPlayer($id);
+		$player->attributes = $_GET;
 		$this->render('view', array(
 			'model'	=>	$player,
 		));

@@ -3,7 +3,16 @@
 class PlayerModel extends PlayerRecord
 {
 
+	public $tab = 'matches';
+
 	protected $_matches = array();
+
+	public function rules()
+	{
+		return array(
+			array('tab', 'safe'),
+		);
+	}
 
 	public function attributeLabels()
 	{
@@ -136,6 +145,55 @@ class PlayerModel extends PlayerRecord
 	{
 		$winrate = $this->getWin($season) * 1.0 / max(1, $this->getAttendance($season));
 		return $winrate * 100.0;
+	}
+
+	public function getTeammates()
+	{
+		$teammates = array();
+		foreach ($this->matches as $match) {
+			$players = $match->players;
+			foreach ($players[$match->side] as $p) {
+				if ($p->id == $this->id) continue;
+				if (isset($teammates[$p->id])) {
+					$teammates[$p->id]->append($p->match);
+				} else {
+					$teammates[$p->id] = new FriendModel($p);
+					$teammates[$p->id]->append($p->match);
+				}
+			}
+		}
+		return $teammates;
+	}
+
+	public function getOpponents()
+	{
+		$opponents = array();
+		foreach ($this->matches as $match) {
+			$players = $match->players;
+			foreach ($players[1 - $match->side] as $p) {
+				if (isset($opponents[$p->id])) {
+					$opponents[$p->id]->append($p->match);
+				} else {
+					$opponents[$p->id] = new FriendModel($p);
+					$opponents[$p->id]->append($p->match);
+				}
+			}
+		}
+		return $opponents;
+	}
+
+	public function getHeroes()
+	{
+		$heroes = array();
+		foreach ($this->matches as $match) {
+			if (isset($heroes[$match->hero->id])) {
+				$heroes[$match->hero->id]->append($match);
+			} else {
+				$heroes[$match->hero->id] = new PlayerHeroModel($match->hero);
+				$heroes[$match->hero->id]->append($match);
+			}
+		}
+		return array_values($heroes);
 	}
 
 }

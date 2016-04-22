@@ -1,6 +1,5 @@
-<h2>D.O.T.A. 出场英雄</h2>
-
 <?php
+
 $columns = array(
 	array(
 		'header' => '',
@@ -11,13 +10,13 @@ $columns = array(
 	array(
 		'class' => 'CLinkColumn',
 		'header' => '',
-		'urlExpression' => '"/hero/" . $data->id',
-		'labelExpression' => '$data->chinese_name',
+		'urlExpression' => '"/player/" . $data->player->id',
+		'labelExpression' => '$data->player->name',
 		'headerHtmlOptions' => array('style' => 'width: 100px'),
 		'htmlOptions' => array('style' => 'width: 120px'),
 	),
 	array(
-		'name' => 'attendance',
+		'name' => 'count',
 		'headerHtmlOptions' => array('style' => 'width: 100px'),
 		'htmlOptions' => array('style' => 'width: 100px'),
 	),
@@ -29,6 +28,11 @@ $columns = array(
 	array(
 		'name' => 'winrate',
 		'type' => 'number',
+		'headerHtmlOptions' => array('style' => 'width: 100px'),
+		'htmlOptions' => array('style' => 'width: 100px'),
+	),
+	array(
+		'name' => 'player.currentRank',
 		'headerHtmlOptions' => array('style' => 'width: 100px'),
 		'htmlOptions' => array('style' => 'width: 100px'),
 	),
@@ -51,12 +55,12 @@ $columns = array(
 );
 
 $this->widget('bootstrap.widgets.TbGridView', array(
-	'dataProvider' => new CArrayDataProvider($heroes, array(
+	'dataProvider' => new CArrayDataProvider(array_values($model->teammates), array(
 		'pagination' => false,
 		'sort' => array(
 			'attributes' => array(
-				'attendance' => array(
-					'label' => '出场',
+				'count' => array(
+					'label' => '场次',
 					'default' => 'desc',
 				),
 				'win' => array(
@@ -65,6 +69,10 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 				),
 				'winrate' => array(
 					'label' => '胜率',
+					'default' => 'desc',
+				),
+				'player.currentRank' => array(
+					'label' => '当前实力',
 					'default' => 'desc',
 				),
 				'kda' => array(
@@ -83,7 +91,8 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 		),
 	)),
 	'columns' => $columns,
+	'rowCssClassExpression' => '$data->win >= $data->lose ? "win" : "lose"',
 	'htmlOptions' => array('style' => 'table-layout: fixed'),
 ));
 
-/** vim: set fdm=indent :
+/** vim: set fdm=indent: */

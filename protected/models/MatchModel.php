@@ -28,8 +28,8 @@ class MatchModel extends MatchRecord
 	public function getParticipation()
 	{
 		$basis = 0;
-		foreach ($this->players[$this->side] as $player) {
-			$basis += $player->match->kills;
+		foreach ($this->players[1 - $this->side] as $player) {
+			$basis += $player->match->deaths;
 		}
 		if ($basis == 0) {
 			return 0.0;

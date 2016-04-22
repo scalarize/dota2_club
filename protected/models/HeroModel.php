@@ -19,6 +19,41 @@ class HeroModel extends HeroRecord
 		return $this->_matches[$season];
 	}
 
+	public function getKda()
+	{
+		$kills = 0;
+		$deaths = 0;
+		$assists = 0;
+		foreach ($this->matches as $match) {
+			$kills += $match->kills;
+			$deaths += $match->deaths;
+			$assists += $match->assists;
+		}
+		return sprintf('%.2f', ($kills + $assists) / max(1, $deaths));
+	}
+
+	public function getGpm()
+	{
+		$gold = 0;
+		$duration = 0;
+		foreach ($this->matches as $match) {
+			$gold += $match->gold;
+			$duration += $match->duration;
+		}
+		return sprintf('%d', $gold / max(1, $duration / 60));
+	}
+
+	public function getXpm()
+	{
+		$xp = 0;
+		$duration = 0;
+		foreach ($this->matches as $match) {
+			$xp += $match->xp;
+			$duration += $match->duration;
+		}
+		return sprintf('%d', $xp / max(1, $duration / 60));
+	}
+
 	public function getAttendance()
 	{
 		return count($this->matches);
@@ -40,3 +75,5 @@ class HeroModel extends HeroRecord
 	}
 
 }
+
+/** vim: set fdm=indent : */
