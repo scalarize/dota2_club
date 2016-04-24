@@ -150,5 +150,4 @@ class Controller extends CController
 	}
 
 }
-
-
+*/

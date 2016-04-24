@@ -9,6 +9,11 @@ class SteamPlayerModel extends PlayerModel
 
 	public function getSteamProfile()
 	{
+		$saved = PlayerSteamProfileRecord::model()->findByPK($this->steam_id);
+		if ($saved) {
+			return $saved;
+		}
+			
 		$url = sprintf(self::$API, $this->steam_id);
 		$timeout = 5;
 		$request = curl_init($url);
@@ -25,7 +30,16 @@ class SteamPlayerModel extends PlayerModel
 			if (is_array($players)) {
 				foreach ($players as $player) {
 					if ($player->steamid == $this->steam_id) {
-						return (array)$player;
+						$found = (array)$player;
+						$model = new PlayerSteamProfileRecord();
+						foreach ($model->attributes as $attr => $val) {
+							if (isset($found[$attr])) {
+								$model->$attr = $found[$attr];
+							}
+						}
+						$model->steam_id = $this->steam_id;
+						$model->save();
+						return $model;
 					}
 				}
 			}
@@ -39,8 +53,8 @@ class SteamPlayerModel extends PlayerModel
 		$steam_profile = $this->steamProfile;
 		if (!empty($steam_profile)) {
 			foreach (array('personaname', 'lastlogoff', 'avatar', 'avatarmedium', 'avatarfull') as $key) {
-				if (isset($steam_profile[$key])) {
-					$attrs["steam_$key"] = $steam_profile[$key];
+				if (isset($steam_profile->$key)) {
+					$attrs["steam_$key"] = $steam_profile->$key;
 				} else {
 					$attrs["steam_$key"] = '';
 				}
@@ -52,6 +66,11 @@ class SteamPlayerModel extends PlayerModel
 	public function getSteamName()
 	{
 		return $this->fullAttributes['steam_personaname'];
+	}
+
+	public function getAvatarUrl()
+	{
+		return $this->fullAttributes['steam_avatarmedium'];
 	}
 
 }

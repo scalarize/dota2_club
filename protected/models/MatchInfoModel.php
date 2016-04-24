@@ -66,4 +66,26 @@ class MatchInfoModel extends MatchInfoRecord
 		}
 	}
 
+	public function getBanPicks()
+	{
+		$ret = array('ban' => array('radiant' => array(), 'dire' => array()), 'pick' => array('radiant' => array(), 'dire' => array()));
+		$criteria = new CDbCriteria(array(
+			'condition' => 'match_id=?',
+			'order' => 'idx',
+			'params' => array(
+				$this->id,
+			),
+		));
+		$bps = MatchBanPickModel::model('MatchBanPickModel')->findAll($criteria);
+		foreach ($bps as $bp) {
+			$side = $bp->side == 0 ? 'radiant' : 'dire';
+			$op = $bp->op == 0 ? 'ban' : 'pick';
+			$ret[$op][$side] []= $bp;
+		}
+		return $ret;
+	}
+
 }
+
+/** vim: set noet fdm=indent: */
+

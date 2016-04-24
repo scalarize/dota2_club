@@ -40,13 +40,17 @@ class MatchModel extends MatchRecord
 
 	public function getGpm()
 	{
-		return $this->gold / $this->duration * 60;
+		return $this->gold / max(1, $this->duration / 60);
 	}
 
 	public function getXpm()
 	{
-		return $this->xp / $this->duration * 60;
+		return $this->xp / max(1, $this->duration / 60);
 	}
 
+	public function getKda()
+	{
+		return ($this->kills + $this->assists) * 1.0 / max(1, $this->deaths);
+	}
 
 }

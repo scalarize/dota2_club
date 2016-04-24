@@ -54,6 +54,29 @@ class HeroModel extends HeroRecord
 		return sprintf('%d', $xp / max(1, $duration / 60));
 	}
 
+	public function getBanPicks()
+	{
+		$ret = array('ban' => array(), 'pick' => array());
+		$criteria = new CDbCriteria(array(
+			'condition' => 'hero_id=?',
+			'order' => 'match_id, idx',
+			'params' => array(
+				$this->id,
+			),
+		));
+		$bps = MatchBanPickModel::model('MatchBanPickModel')->findAll($criteria);
+		foreach ($bps as $bp) {
+			$op = $bp->op == 0 ? 'ban' : 'pick';
+			$ret[$op] []= $bp;
+		}
+		return $ret;
+	}
+
+	public function getBanned()
+	{
+		return count($this->banPicks['ban']);
+	}
+
 	public function getAttendance()
 	{
 		return count($this->matches);
@@ -72,6 +95,13 @@ class HeroModel extends HeroRecord
 	{
 		$winrate = $this->getWin($season) * 1.0 / max(1, $this->getAttendance($season));
 		return $winrate * 100.0;
+	}
+
+	public function getAvatarUrl()
+	{
+		return sprintf('http://cdn.dota2.com/apps/dota2/images/heroes/%s_vert.jpg',
+			str_replace('npc_dota_hero_', '', $this->name)
+		);
 	}
 
 }

@@ -15,6 +15,7 @@ $this->widget('bootstrap.widgets.TbDetailView', array(
 		'chinese_name',
 		'attendance',
 		'win',
+		'banned',
 	),
 ));
 

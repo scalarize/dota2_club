@@ -17,6 +17,11 @@ $columns = array(
 		'htmlOptions' => array('style' => 'width: 120px'),
 	),
 	array(
+		'name' => 'banned',
+		'headerHtmlOptions' => array('style' => 'width: 100px'),
+		'htmlOptions' => array('style' => 'width: 100px'),
+	),
+	array(
 		'name' => 'attendance',
 		'headerHtmlOptions' => array('style' => 'width: 100px'),
 		'htmlOptions' => array('style' => 'width: 100px'),
@@ -55,6 +60,10 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 		'pagination' => false,
 		'sort' => array(
 			'attributes' => array(
+				'banned' => array(
+					'label' => '禁用次数',
+					'default' => 'desc',
+				),
 				'attendance' => array(
 					'label' => '出场',
 					'default' => 'desc',
