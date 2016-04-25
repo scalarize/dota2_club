@@ -10,7 +10,7 @@ $columns = array(
 	),
 	array(
 		'class' => 'CLinkColumn',
-		'header' => '使用者',
+		'header' => '',
 		'urlExpression' => '"/player/" . $data->id',
 		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->avatarUrl, $data->steamName)',
 		'headerHtmlOptions' => array('style' => 'width: 180px'),
