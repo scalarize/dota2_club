@@ -16,7 +16,12 @@ class MatchController extends Controller
 
 	public function actionAll($season = '2016s2')
 	{
-		$matches = MatchInfoModel::model('MatchInfoModel')->findAll('season=?', array($season));
+		$criteria = new CDbCriteria(array(
+			'condition' => 'season=?',
+			'order' => 'id desc',
+			'params' => array($season),
+		));
+		$matches = MatchInfoModel::model('MatchInfoModel')->findAll($criteria);
 		$ret = array();
 		foreach ($matches as $match) {
 			$row = $match->attributes;
@@ -46,7 +51,12 @@ class MatchController extends Controller
 
 	public function actionIndex($season = '2016s2')
 	{
-		$matches = MatchInfoModel::model('MatchInfoModel')->findAll('season=?', array($season));
+		$criteria = new CDbCriteria(array(
+			'condition' => 'season=?',
+			'order' => 'id desc',
+			'params' => array($season),
+		));
+		$matches = MatchInfoModel::model('MatchInfoModel')->findAll($criteria);
 		$this->render('index', array(
 			'season'	=>	$season,
 			'matches'	=>	$matches,

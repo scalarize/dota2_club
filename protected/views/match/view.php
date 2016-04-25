@@ -22,21 +22,22 @@ $columns = array(
 		'header' => '选手',
 		'urlExpression' => '"/player/" . $data->id',
 		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->avatarUrl, $data->steamName)',
-		'headerHtmlOptions' => array('style' => 'width: 160px'),
-		'htmlOptions' => array('style' => 'width: 160px'),
+		'headerHtmlOptions' => array('style' => 'width: 220px'),
+		'htmlOptions' => array('style' => 'width: 220px'),
 	),
 	array(
 		'class' => 'CLinkColumn',
 		'header' => '英雄',
 		'urlExpression' => '"/hero/" . $data->match->hero->id',
 		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->match->hero->avatarUrl, $data->match->hero->chinese_name)',
-		'headerHtmlOptions' => array('style' => 'width: 120px'),
-		'htmlOptions' => array('style' => 'width: 120px'),
+		'headerHtmlOptions' => array('style' => 'width: 180px'),
+		'htmlOptions' => array('style' => 'width: 180px'),
 	),
 	array(
 		'header' => 'KDA',
 		'type' => 'raw',
-		'value' => 'str_replace(" ", "&nbsp;", sprintf("%3.1f %2d/%2d/%2d", $data->match->kda, $data->match->kills, $data->match->deaths, $data->match->assists))',
+		'value' => 'str_replace(" ", "&nbsp;", sprintf("%2d.%1d %2d/%2d/%2d", $data->match->kda, $data->match->kda * 10 % 10,
+				$data->match->kills, $data->match->deaths, $data->match->assists))',
 		'headerHtmlOptions' => array('style' => 'width: 160px'),
 		'htmlOptions' => array('style' => 'width: 160px; vertical-align: middle;'),
 	),
@@ -66,7 +67,7 @@ $columns = array(
 <h5>BANNED
 <?php
 	foreach ($model->banPicks['ban']['radiant'] as $bp) {
-		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="match-avatars-img" src="%s" alter="%s" /></span></a>',
+		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="match-avatars-img gray" src="%s" alter="%s" /></span></a>',
 			$bp->hero->id, $bp->hero->avatarUrl, $bp->hero->chinese_name);
 	}
 ?>
@@ -95,7 +96,7 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 <h5>BANNED
 <?php
 	foreach ($model->banPicks['ban']['dire'] as $bp) {
-		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="match-avatars-img" src="%s" alter="%s" /></span></a>',
+		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="match-avatars-img gray" src="%s" alter="%s" /></span></a>',
 			$bp->hero->id, $bp->hero->avatarUrl, $bp->hero->chinese_name);
 	}
 ?>
