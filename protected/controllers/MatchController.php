@@ -9,7 +9,7 @@ class MatchController extends Controller
 		$data = $match->attributes;
 		$data['winner'] = $match->winner;
 		$data['attendants'] = $match->attendants;
-		$data['info'] = @json_decode($match->info);
+		$data['info'] = $match->extraInfo;
 
 		$this->renderJson($data);
 	}

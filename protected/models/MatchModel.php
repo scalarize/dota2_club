@@ -53,4 +53,39 @@ class MatchModel extends MatchRecord
 		return ($this->kills + $this->assists) * 1.0 / max(1, $this->deaths);
 	}
 
+	public function getDamage()
+	{
+		$players = $this->info->extraInfo->players;
+		if (is_array($players)) {
+			foreach ($players as $player) {
+				if ($player->steam_id == $this->player->steam_id) {
+					return $player->hero_damage;
+				}
+			}
+		}
+		return 0;
+	}
+
+	public function getDamagePercentage()
+	{
+		$damage = 0;
+		$totalDamage = 0;
+		$players = $this->info->extraInfo->players;
+		if (is_array($players)) {
+			foreach ($players as $player) {
+				if ($player->steam_id == $this->player->steam_id) {
+					$damage = $player->hero_damage;
+				}
+				$side = $player->player_slot >= 128 ? 1 : 0;
+				if ($side == $this->side) {
+					$totalDamage += $player->hero_damage;
+				}
+			}
+		}
+		return $damage * 100.0 / max(1, $totalDamage);
+	}
+
 }
+
+/** vim: set noet fdm=indent : */
+

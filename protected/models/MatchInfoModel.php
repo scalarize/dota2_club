@@ -85,6 +85,11 @@ class MatchInfoModel extends MatchInfoRecord
 		return $ret;
 	}
 
+	public function getExtraInfo()
+	{
+		return @json_decode($this->info);
+	}
+
 }
 
 /** vim: set noet fdm=indent: */

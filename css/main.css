@@ -173,3 +173,13 @@ tr.lose {
 	filter: gray; 
 } 
 
+.grid-view table.items {
+	table-layout: fixed;
+}
+
+.grid-view table.items td {
+	white-space: nowrap;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
