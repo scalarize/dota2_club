@@ -141,6 +141,15 @@ class PlayerModel extends PlayerRecord
 		return $win;
 	}
 
+	public function getLose($season = '2016s2')
+	{
+		$lose = 0;
+		foreach ($this->getMatches($season) as $match_id => $match) {
+			$lose += $match->win > 0 ? 0 : 1;
+		}
+		return $lose;
+	}
+
 	public function getWinrate($season = '2016s2')
 	{
 		$winrate = $this->getWin($season) * 1.0 / max(1, $this->getAttendance($season));
