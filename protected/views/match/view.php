@@ -29,9 +29,9 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '英雄',
 		'urlExpression' => '"/hero/" . $data->match->hero->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->match->hero->avatarUrl, $data->match->hero->chinese_name)',
-		'headerHtmlOptions' => array('style' => 'width: 150px'),
-		'htmlOptions' => array('style' => 'width: 150px'),
+		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" />", $data->match->hero->avatarUrl)',
+		'headerHtmlOptions' => array('style' => 'width: 70px'),
+		'htmlOptions' => array('style' => 'width: 70px'),
 	),
 	array(
 		'header' => 'KDA',
