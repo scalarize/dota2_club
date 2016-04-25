@@ -7,10 +7,16 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 	),
 ));
 
+?>
+<div>
+<div class="pull-left span9">
+<?php
+
 $this->widget('bootstrap.widgets.TbDetailView', array(
 	'data' => $model,
 	'attributes' => array(
 		'name',
+		'steamName',
 		'form',
 		'rank_score',
 		'currentRank',
@@ -22,6 +28,18 @@ $this->widget('bootstrap.widgets.TbDetailView', array(
 		'xpm',
 	),
 ));
+
+?>
+
+</div>
+<div class="pull-right span2">
+<img src="<?php echo $model->fullAvatarUrl; ?>" class="match-avatars-img-large" />
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+<?php
 
 $params = $_GET;
 $items = array();
@@ -43,3 +61,6 @@ $this->widget('bootstrap.widgets.TbMenu', array(
 $this->renderPartial('view_' . $model->tab, array(
 	'model' => $model,
 ));
+
+/** vim: set noet fdm=indent : */
+

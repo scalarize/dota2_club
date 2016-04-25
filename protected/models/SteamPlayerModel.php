@@ -73,4 +73,9 @@ class SteamPlayerModel extends PlayerModel
 		return $this->fullAttributes['steam_avatarmedium'];
 	}
 
+	public function getFullAvatarUrl()
+	{
+		return $this->fullAttributes['steam_avatarfull'];
+	}
+
 }
