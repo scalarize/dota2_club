@@ -12,9 +12,9 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '',
 		'urlExpression' => '"/hero/" . $data->id',
-		'labelExpression' => '$data->chinese_name',
-		'headerHtmlOptions' => array('style' => 'width: 100px'),
-		'htmlOptions' => array('style' => 'width: 120px'),
+		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" />", $data->avatarUrl)',
+		'headerHtmlOptions' => array('style' => 'width: 70px'),
+		'htmlOptions' => array('style' => 'width: 70px'),
 	),
 	array(
 		'name' => 'banned',

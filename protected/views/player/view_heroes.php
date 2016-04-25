@@ -8,11 +8,11 @@ $columns = array(
 	),
 	array(
 		'class' => 'CLinkColumn',
-		'header' => '',
+		'header' => '英雄',
 		'urlExpression' => '"/hero/" . $data->hero->id',
-		'labelExpression' => '$data->hero->chinese_name',
-		'headerHtmlOptions' => array('style' => 'width: 100px'),
-		'htmlOptions' => array('style' => 'width: 120px'),
+		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" />", $data->hero->avatarUrl)',
+		'headerHtmlOptions' => array('style' => 'width: 70px'),
+		'htmlOptions' => array('style' => 'width: 70px'),
 	),
 	array(
 		'name' => 'attendance',
