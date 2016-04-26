@@ -154,9 +154,39 @@ tr.lose {
 	background-color: #F5F5DE;
 }
 
-.match-avatars-img {
+.hero-avatars-img {
 	height: 45px;
-	width: 45px;
+	width: 80px;
+	vertical-align: middle;
+	margin-right: 3px;
+	box-shadow: 0 1px 1px #000;
+	border-radius: 5%;
+	border: 1px solid #777;
+}
+
+.hero-avatars-img-small {
+	height: 27px;
+	width: 48px;
+	vertical-align: middle;
+	margin-right: 3px;
+	box-shadow: 0 1px 1px #000;
+	border-radius: 5%;
+	border: 1px solid #777;
+}
+
+.hero-avatars-img-large {
+	height: 108px;
+	width: 192px;
+	vertical-align: middle;
+	margin-right: 3px;
+	box-shadow: 0 1px 1px #000;
+	border-radius: 5%;
+	border: 1px solid #777;
+}
+
+.player-avatars-img {
+	height: 60px;
+	width: 60px;
 	vertical-align: middle;
 	margin-right: 3px;
 	box-shadow: 0 1px 2px #000;
@@ -164,7 +194,7 @@ tr.lose {
 	border: 1px solid #777;
 }
 
-.match-avatars-img-small {
+.player-avatars-img-small {
 	height: 30px;
 	width: 30px;
 	vertical-align: middle;
@@ -174,7 +204,7 @@ tr.lose {
 	border: 1px solid #777;
 }
 
-.match-avatars-img-large {
+.player-avatars-img-large {
 	height: 105px;
 	width: 105px;
 	vertical-align: middle;

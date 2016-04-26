@@ -10,7 +10,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '英雄',
 		'urlExpression' => '"/hero/" . $data->hero->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" />", $data->hero->avatarUrl)',
+		'labelExpression' => 'sprintf("<img class=\"hero-avatars-img\" src=\"%s\" />", $data->hero->avatarUrl)',
 		'headerHtmlOptions' => array('style' => 'width: 70px'),
 		'htmlOptions' => array('style' => 'width: 70px'),
 	),

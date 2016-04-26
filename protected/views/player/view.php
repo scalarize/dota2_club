@@ -33,7 +33,7 @@ $this->widget('bootstrap.widgets.TbDetailView', array(
 
 </div>
 <div class="pull-right span2">
-<img src="<?php echo $model->fullAvatarUrl; ?>" class="match-avatars-img-large" />
+<img src="<?php echo $model->fullAvatarUrl; ?>" class="player-avatars-img-large" />
 </div>
 </div>
 

@@ -1,6 +1,27 @@
 <h2>D.O.T.A. 赛季: <?php echo $season; ?></h2>
 
 <?php
+
+$playerList = array('0' => '全部');
+foreach ($players as $player) {
+	$playerList[$player->id] = $player->steamName;
+}
+$resultList = array('0' => '无所谓', '1' =>'胜', '2' => '负');
+
+$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'action' => '/match/',
+	'method' => 'GET',
+));
+
+echo $form->dropDownList($model, 'player', $playerList, array(
+	'name' => 'player',
+));
+echo $form->dropDownList($model, 'result', $resultList, array(
+	'name' => 'result',
+));
+$this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type' =>'primary', 'label'=>'查询'));
+$this->endWidget();
+
 $columns = array(
 	array(
 		'class' => 'CLinkColumn',
@@ -32,15 +53,17 @@ $columns = array(
 		'class' => 'MatchAttandentsColumn',
 		'header' => '天辉',
 		'name' => 'radiant',
-		'headerHtmlOptions' => array('style' => 'width: 180px'),
-		'htmlOptions' => array('style' => 'width: 180px'),
+		'highlight' => $model->player,
+		'headerHtmlOptions' => array('style' => 'width: 240px'),
+		'htmlOptions' => array('style' => 'width: 240px'),
 	),
 	array(
 		'class' => 'MatchAttandentsColumn',
 		'header' => '夜魇',
 		'name' => 'dire',
-		'headerHtmlOptions' => array('style' => 'width: 180px'),
-		'htmlOptions' => array('style' => 'width: 180px'),
+		'highlight' => $model->player,
+		'headerHtmlOptions' => array('style' => 'width: 240px'),
+		'htmlOptions' => array('style' => 'width: 240px'),
 	),
 	'extra',
 );

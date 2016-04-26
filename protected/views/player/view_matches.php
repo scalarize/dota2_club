@@ -31,7 +31,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '出场英雄',
 		'urlExpression' => '"/hero/" . $data->hero->id',
-		'labelExpression' => 'sprintf("<img src=\"%s\" class=\"match-avatars-img\" />",
+		'labelExpression' => 'sprintf("<img src=\"%s\" class=\"hero-avatars-img\" />",
 					$data->hero->avatarUrl)',
 		'headerHtmlOptions' => array('style' => 'width: 80px'),
 		'htmlOptions' => array('style' => 'width: 80px'),

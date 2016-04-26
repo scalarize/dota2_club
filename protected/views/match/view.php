@@ -21,7 +21,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '选手',
 		'urlExpression' => '"/player/" . $data->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->avatarUrl, $data->steamName)',
+		'labelExpression' => 'sprintf("<img class=\"player-avatars-img\" src=\"%s\" /> %s", $data->avatarUrl, $data->steamName)',
 		'headerHtmlOptions' => array('style' => 'width: 180px'),
 		'htmlOptions' => array('style' => 'width: 180px'),
 	),
@@ -29,7 +29,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '英雄',
 		'urlExpression' => '"/hero/" . $data->match->hero->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" />", $data->match->hero->avatarUrl)',
+		'labelExpression' => 'sprintf("<img class=\"hero-avatars-img\" src=\"%s\" />", $data->match->hero->avatarUrl)',
 		'headerHtmlOptions' => array('style' => 'width: 70px'),
 		'htmlOptions' => array('style' => 'width: 70px'),
 	),
@@ -72,23 +72,22 @@ $columns = array(
 ?>
 
 <h4>天辉</h4>
-<h5>BANNED
+<h5><span class="span1">ban</span>
 <?php
 	foreach ($model->banPicks['ban']['radiant'] as $bp) {
-		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="match-avatars-img gray" src="%s" alter="%s" /></span></a>',
+		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="hero-avatars-img gray" src="%s" alter="%s" /></span></a>',
 			$bp->hero->id, $bp->hero->avatarUrl, $bp->hero->chinese_name);
 	}
 ?>
 </h5>
-<h5>PICKED
+<h5><span class="span1">pick</span>
 <?php
 	foreach ($model->banPicks['pick']['radiant'] as $bp) {
-		printf('<a href="/hero/%d"><span class="bp bp-pick"><img class="match-avatars-img" src="%s" alter="%s" /></span></a>',
+		printf('<a href="/hero/%d"><span class="bp bp-pick"><img class="hero-avatars-img" src="%s" alter="%s" /></span></a>',
 			$bp->hero->id, $bp->hero->avatarUrl, $bp->hero->chinese_name);
 	}
 ?>
 </h5>
-<hr />
 
 <?php
 
@@ -100,19 +99,21 @@ $this->widget('bootstrap.widgets.TbGridView', array(
 ));
 ?>
 
+<hr style="margin: 48px 0;" />
+
 <h4>夜魇</h4>
-<h5>BANNED
+<h5><span class="span1">ban</span>
 <?php
 	foreach ($model->banPicks['ban']['dire'] as $bp) {
-		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="match-avatars-img gray" src="%s" alter="%s" /></span></a>',
+		printf('<a href="/hero/%d"><span class="bp bp-ban"><img class="hero-avatars-img gray" src="%s" alter="%s" /></span></a>',
 			$bp->hero->id, $bp->hero->avatarUrl, $bp->hero->chinese_name);
 	}
 ?>
 </h5>
-<h5>PICKED
+<h5><span class="span1">pick</span>
 <?php
 	foreach ($model->banPicks['pick']['dire'] as $bp) {
-		printf('<a href="/hero/%d"><span class="bp bp-pick"><img class="match-avatars-img" src="%s" alter="%s" /></span></a>',
+		printf('<a href="/hero/%d"><span class="bp bp-pick"><img class="hero-avatars-img" src="%s" alter="%s" /></span></a>',
 			$bp->hero->id, $bp->hero->avatarUrl, $bp->hero->chinese_name);
 	}
 ?>

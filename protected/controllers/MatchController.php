@@ -51,13 +51,37 @@ class MatchController extends Controller
 
 	public function actionIndex($season = '2016s2')
 	{
+		$model = new MatchInfoModel();
+		$model->attributes = $_REQUEST;
 		$criteria = new CDbCriteria(array(
 			'condition' => 'season=?',
 			'order' => 'id desc',
 			'params' => array($season),
 		));
-		$matches = MatchInfoModel::model('MatchInfoModel')->findAll($criteria);
+		$allPlayers = SteamPlayerModel::model('SteamPlayerModel')->findAll();
+		$matches = array();
+		foreach (MatchInfoModel::model('MatchInfoModel')->findAll($criteria) as $match) {
+			if ($model->player) {
+				$found = false;
+				foreach ($match->attendants as $side => $players) {
+					foreach ($players as $player) {
+						if ($player->id == $model->player) {
+							$found = true;
+							if ($model->result == 1 && $player->match->win == 0) break;
+							if ($model->result == 2 && $player->match->win > 0) break;
+							$matches []= $match;
+							break;
+						}
+					}
+					if ($found) break;
+				}
+			} else {
+				$matches []= $match;
+			}
+		}
 		$this->render('index', array(
+			'model'		=>	$model,
+			'players'	=>	$allPlayers,
 			'season'	=>	$season,
 			'matches'	=>	$matches,
 		));

@@ -3,6 +3,16 @@
 class MatchInfoModel extends MatchInfoRecord
 {
 
+	public $player;
+	public $result;
+
+	public function rules()
+	{
+		return array(
+			array('player, result', 'numerical'),
+		);
+	}
+
 	public function attributeLabels()
 	{
 		return array_merge(

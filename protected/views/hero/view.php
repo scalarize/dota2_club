@@ -28,7 +28,7 @@ $this->widget('bootstrap.widgets.TbDetailView', array(
 
 </div>
 <div class="pull-right span2">
-<img src="<?php echo $model->avatarUrl; ?>" class="match-avatars-img-large" />
+<img src="<?php echo $model->avatarUrl; ?>" class="hero-avatars-img-large" />
 </div>
 </div>
 
@@ -66,7 +66,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '使用者',
 		'urlExpression' => '"/player/" . $data->player->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->player->avatarUrl, $data->player->steamName)',
+		'labelExpression' => 'sprintf("<img class=\"player-avatars-img\" src=\"%s\" /> %s", $data->player->avatarUrl, $data->player->steamName)',
 		'headerHtmlOptions' => array('style' => 'width: 180px'),
 		'htmlOptions' => array('style' => 'width: 180px'),
 	),

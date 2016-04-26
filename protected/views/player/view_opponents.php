@@ -11,7 +11,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '',
 		'urlExpression' => '"/player/" . $data->player->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" /> %s", $data->player->avatarUrl, $data->player->steamName)',
+		'labelExpression' => 'sprintf("<img class=\"player-avatars-img\" src=\"%s\" /> %s", $data->player->avatarUrl, $data->player->steamName)',
 		'headerHtmlOptions' => array('style' => 'width: 180px'),
 		'htmlOptions' => array('style' => 'width: 180px'),
 	),

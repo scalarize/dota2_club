@@ -99,7 +99,8 @@ class HeroModel extends HeroRecord
 
 	public function getAvatarUrl()
 	{
-		return sprintf('http://cdn.dota2.com/apps/dota2/images/heroes/%s_vert.jpg',
+		return sprintf('http://cdn.dota2.com/apps/dota2/images/heroes/%s_full.png',
+		//return sprintf('http://cdn.dota2.com/apps/dota2/images/heroes/%s_vert.jpg',
 			str_replace('npc_dota_hero_', '', $this->name)
 		);
 	}

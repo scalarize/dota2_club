@@ -12,7 +12,7 @@ $columns = array(
 		'class' => 'CLinkColumn',
 		'header' => '',
 		'urlExpression' => '"/hero/" . $data->id',
-		'labelExpression' => 'sprintf("<img class=\"match-avatars-img\" src=\"%s\" />", $data->avatarUrl)',
+		'labelExpression' => 'sprintf("<img class=\"hero-avatars-img\" src=\"%s\" />", $data->avatarUrl)',
 		'headerHtmlOptions' => array('style' => 'width: 70px'),
 		'htmlOptions' => array('style' => 'width: 70px'),
 	),
